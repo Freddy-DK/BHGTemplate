@@ -1,0 +1,4 @@
+Param(
+    [Hashtable]$parameters
+)
+
