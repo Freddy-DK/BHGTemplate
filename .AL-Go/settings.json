@@ -1,7 +1,3 @@
 {
-  "$schema": "https://raw.githubusercontent.com/freddydk/AL-Go/bhg/Actions/.Modules/settings.schema.json",
-  "country": "dk",
-  "appFolders": [],
-  "testFolders": [],
-  "bcptTestFolders": []
+  "$schema": "https://raw.githubusercontent.com/freddydk/AL-Go/bhg/Actions/.Modules/settings.schema.json"
 }
