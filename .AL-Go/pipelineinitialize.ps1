@@ -12,6 +12,7 @@ Start-Job -ScriptBlock {
     MyStartServices
 } | Out-Null
 
+Write-Host "::group::Pipeline Initialize"
 Write-Host "Set parent variable 'bcAuthContext'"
 $bcAuthContext = @{
     "username" = "admin"
@@ -24,3 +25,12 @@ Set-Variable -Name 'environment' -value "http://localhost/BC" -scope 1
 
 Write-Host "Set parent variable 'artifactCachePath'"
 Set-Variable -Name 'artifactCachePath' -value "C:\compilerfolder.cache" -scope 1
+
+#Get-ChildItem -Path "c:\" | Out-Host
+#Write-Host "C:\COMPILERFOLDER.CACHE"
+#Get-ChildItem -Path "C:\compilerfolder.cache" -Recurse | ForEach-Object { Write-Host ".$($_.FullName.SubString(23))" }
+#Write-Host "C:\BCARTIFACTS.CACHE"
+#Get-ChildItem -Path "C:\bcartifacts.cache" -Recurse | ForEach-Object { Write-Host ".$($_.FullName.SubString(20))" }
+#Write-Host "C:\PROGRAM FILES\MICROSOFT DYNAMICS NAV"
+#Get-ChildItem -Path "C:\Program Files\Microsoft Dynamics NAV" -Recurse | ForEach-Object { Write-Host ".$($_.FullName.SubString(39))" }
+Write-Host "::endgroup::"
